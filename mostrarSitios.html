@@ -35,8 +35,9 @@
 <script type="text/javascript" src="js/custom.js"></script>
 <script>
     $(window).ready(function(){
+       var seccional = localStorage.getItem('seccional');
        var div = $("#carga");
-        var url = "http://derumba.co/app20/administrador/mostrarSitiosPorSeccional/NORTE";
+        var url = "http://derumba.co/app20/administrador/mostrarSitiosPorSeccional/"+seccional;
                 var data="idPersona=1000697032";
                 $.ajax({
 			        async:	true, 
@@ -57,7 +58,7 @@
     
     function mostrarSitio(idSitio){
         localStorage.setItem('sitio',idSitio);
-        window.location='sitio.html';
+        
     }
     
 </script>

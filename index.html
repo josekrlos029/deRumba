@@ -33,6 +33,11 @@
 <script type="text/javascript" src="js/effects.jquery-ui.min.js"></script>
 <script type="text/javascript" src="js/jquery.colorbox.min.js"></script>
 <script type="text/javascript" src="js/custom.js"></script>
+<script>
+    function guardar(seccional){
+        localStorage.setItem('seccional',seccional);
+    }
+</script>
 <!-- JavaScript files end -->
 <style type="text/css">
 <!--
@@ -76,7 +81,7 @@
       <h3 class="welcomeTitle style4">BOGOTÁ!</h3>
       <p class="welcomeMessage">¿Donde quieres rumbear hoy?</p>
     </div>
-    <div class="homePageIconsWrapper"> <a href="norte.html" class="homePageIcon homePageIconAbout"></a> <a href="portfolioOneColumn.html" class="homePageIcon homePageIconPortfolio"></a> <a href="contact.html" class="homePageIcon homePageIconContact"></a> <a href="#" class="homePageIcon homePageIconDribbble"></a> <a href="#" class="homePageIcon homePageIconTwitter"></a> <a href="#" class="homePageIcon homePageIconFacebook"></a> </div>
+    <div class="homePageIconsWrapper"> <a onclick="guardar('NORTE')" href="mostrarSitios.html" class="homePageIcon homePageIconAbout"></a> <a onclick="guardar('SUR')" href="mostrarSitios.html" class="homePageIcon homePageIconPortfolio"></a> <a onclick="guardar('ORIENTE')" href="mostrarSitios.html" class="homePageIcon homePageIconContact"></a> <a onclick="guardar('OCCIDENTE')" href="mostrarSitios.html" class="homePageIcon homePageIconDribbble"></a> <a onclick="guardar('CENTRO')" href="mostrarSitios.html" class="homePageIcon homePageIconTwitter"></a> <a onclick="guardar('CHIA')" href="mostrarSitios.html" class="homePageIcon homePageIconFacebook"></a> </div>
   </div>
   <!-- page wrapper ends --> 
   
