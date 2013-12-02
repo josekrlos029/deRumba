@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <widget xmlns		= "http://www.w3.org/ns/widgets"
 	xmlns:gap	= "http://phonegap.com/ns/1.0"
-	id		= "com.extrema.test"
+	id		= "com.deRumba.deRumba"
 	version 	= "1.0.0">
 
 	<name>De Rumba</name>
@@ -31,7 +31,7 @@ Descarga nuestra aplicacion y disfruta de la movida rumbera de tu ciudad.
 	<icon src="icono.png" width="48" height="48" />
 	<icon src="icono.png" width="36" height="36" />
 
-    <gap:splash src="icono.png" />
+    <gap:splash src="icono.png"   width="48" height="48"/>
 
 	<feature name="http://api.phonegap.com/1.0/geolocation"/>
 	<feature name="http://api.phonegap.com/1.0/network"/>
