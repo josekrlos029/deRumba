@@ -26,6 +26,7 @@
 <link href="css/hidpi.css" rel="stylesheet" type="text/css" media="screen" />
 <link href="css/skin.css" rel="stylesheet" type="text/css" media="all" />
 <link href="css/custom.css" rel="stylesheet" type="text/css" media="all" />
+
 <!-- CSS files end -->
 
 <!-- JavaScript files start -->
@@ -33,7 +34,7 @@
 <script type="text/javascript" src="js/effects.jquery-ui.min.js"></script>
 <script type="text/javascript" src="js/jquery.colorbox.min.js"></script>
 <script type="text/javascript" src="js/custom.js"></script>
-<script src="js/phonegap-1.1.0.js"></script>
+<script src="js/phonegap.js"></script>
 <script>
     document.addEventListener("deviceready", onDeviceReady, false);
 
@@ -44,6 +45,8 @@
     function guardar(seccional){
         localStorage.setItem('seccional',seccional);
     }
+    
+    
 </script>
 <!-- JavaScript files end -->
 <style type="text/css">
@@ -57,7 +60,8 @@
 <div class="websiteWrapper"> 
   
   <!-- main menu wrapper starts -->
-  <ul class="mainMenuWrapper">
+  
+  <!--<ul class="mainMenuWrapper">
     <li class="currentPage"><a href="index.html">Inicio</a></li>
     <li><a href="typography.html">Información</a> </li>
     <li><a href="faq.html">FAQ</a></li>
@@ -66,15 +70,14 @@
     <!--<li><a href="portfolioTwoColumns.html">Portfolio Two</a></li>-->
     <!--<li><a href="portfolioOneColumnFilterable.html">Filterable Portfolio One</a></li>-->
     <!--<li><a href="portfolioTwoColumnsFilterable.html">Filterable Portfolio Two</a></li>-->
-    <!--<li><a href="singleProject.html">Single Portfolio Project</a></li>-->
+    <!--<li><a href="singleProject.html">Single Portfolio Project</a></li>
     <li><a href="blog.html">Eventos</a> </li>
-    <!--<li><a href="singlePost.html">Single Post</a></li>-->
     <li><a href="contact.html">Contacto</a></li>
-  </ul>
+  </ul> -->
   <!-- main menu wrapper ends --> 
  
   <!-- header wrapper starts -->
-  <div class="headerOuterWrapper">
+  <!--<div class="headerOuterWrapper">
     <div class="headerWrapper"> <span class="mainMenuButtonLine"></span><a href="#" class="mainMenuButton"></a></div>
   </div>
   <!-- header wrapper ends --> 
@@ -94,7 +97,7 @@
   
   <!-- footer wrapper starts -->
   <div class="footerWrapper"> 
-    <div align="center"><img src="images/common/iconosredesociales.png" alt="Redes Sociales" width="72" height="24"><span class="copyright">&copy; copyright <span class="style4">www.DeRumba.co</span>.</span></div>
+      <div align="center"><img src="images/common/iconosredesociales.png" alt="Redes Sociales" width="72" height="24"><span class="copyright">&copy; copyright <span class="style4">www.DeRumba.co</span>.</span></div>
   </div>
   <!-- footer wrapper ends --> 
   

@@ -1,0 +1,16 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 13/12/2013, 02:44:27 PM
+    Author     : JoseCarlos
+*/
+
+#cabecera{
+    width: 100%;
+    height: 50px;
+    background-color: rgb(0,3,34);
+    border-bottom: 15px rgb(0,255,0) solid;
+}

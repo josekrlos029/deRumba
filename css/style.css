@@ -15,7 +15,7 @@ License: Commercial
 /*//////////////////// Customized Framework CSS Rules Start                                                               */
 /*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 body {
-	background:#000000 url(http://derumba.co/movil/images/content/fondo.png) center no-repeat;
+	background: rgb(0,3,34);
 }
 p > a {
 	color: #00ff00;
