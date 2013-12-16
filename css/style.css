@@ -25,6 +25,16 @@ a {
 }
 h1, h2, h3, h4, h5, h6 {
 	font-weight: normal;
+	
+}
+.titulositios {
+	 font-size: 12px;
+    height: 36px;
+    line-height: 36px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+	text-align: center;
+	color: #fff
 }
 input[type="text"], input[type="password"] {
 	transition: background-color 0.3s;
@@ -442,27 +452,28 @@ tr:hover > td {
 .portfolioTwoFilterableWrapper .portfolioFilterableItemWrapper {
 	float: left;
 	margin-right: 36px;
-	margin-bottom: 36px;
+	margin-bottom: 0px;
 	box-shadow: 0px 3px 0px rgba(0,0,0,0.12);
-	border-radius: 6px;
-	background-color: #fff;
+	border-radius: 6px 6px 0 0;
+		
 }
 .portfolioTwoFilterableWrapper .portfolioFilterableItemImageWrapper {
-	border-radius: 0px 0px 6px 6px;
+	border-radius: 6px 6px 6px 6px;
 }
 .portfolioTwoFilterableWrapper .portfolioFilterableItemImageWrapper img {
-	border-radius: 0px 0px 6px 6px;
+	border-radius: 6px 6px 6px 6px;
 	width: 100%;
 	height: auto;
 }
 .portfolioTwoFilterableWrapper .portfolioFilterableItemInfoWrapper {
-	background-color: #fff;
+	background-color: #0;
 	padding-top: 0px;
 	padding-left: 12px;
 	padding-right: 0px;
 	padding-bottom: 0px;
 	height: 36px;
-	border-radius: 0px 0px 6px 6px;
+	border-radius: 0px 0px 0px 0px;
+
 }
 .portfolioTwoFilterableWrapper .portfolioFilterableItemInfoWrapper > *:last-child {
 	margin-bottom: 0px;
@@ -473,6 +484,7 @@ tr:hover > td {
 	height: 36px;
 	line-height: 36px;
 	padding-bottom: 0px;
+	color: #fff;
 }
 /*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*//////////////////// Filterable Portfolio Two CSS Rules End                                                             */
@@ -616,7 +628,7 @@ tr:hover > td {
 	margin-bottom: 33px;
 }
 .pageWrapper .singleProjectContentWrapper {
-	border-radius: 0px 0px 0px 0px;
+	border-radius: 6px 6px 0px 0px;
 	box-shadow: none;
 	margin-bottom: 0px;
 }
@@ -624,8 +636,8 @@ tr:hover > td {
 	margin-right: 24px;
 	margin-left: 24px;
 	border: 3px solid #fff;
-	margin-bottom: 0px;
-	border-radius: 6px 6px 0 0;
+	margin-bottom: 36px;
+	border-radius: 6px;
 	box-shadow: 0px 3px 0px rgba(0,0,0,0.12);
 }
 .singleProjectImage {
