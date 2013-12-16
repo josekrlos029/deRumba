@@ -63,3 +63,9 @@ text-decoration: none;
     margin-right: 10px;
     top: 6px;
 }
+
+.DIRECCION {
+	color: #666;
+	font-size:12px;
+	font-family:Arial, Helvetica, sans-serif;
+}
