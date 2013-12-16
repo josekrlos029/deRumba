@@ -7,27 +7,27 @@
 	background-size: 24px 18px;
 }
 .homePageIconAbout {
-	background-image: url(../images/common/homePageIconAboutBg-x2.png);
+	background-image: url(../images/common/homeBotonNorte.png);
 	background-size: 24px 24px;
 }
 .homePageIconPortfolio {
-	background-image: url(../images/common/homePageIconPortfolioBg-x2.png);
+	background-image: url(../images/common/homeBotonSur.png);
 	background-size: 24px 24px;
 }
 .homePageIconContact {
-	background-image: url(../images/common/homePageIconContactBg-x2.png);
+	background-image: url(../images/common/homeBotonOriente.png);
 	background-size: 24px 24px;
 }
 .homePageIconDribbble {
-	background-image: url(../images/common/homePageIconDribbbleBg-x2.png);
+	background-image: url(../images/common/homeBotonOccidente.png);
 	background-size: 24px 24px;
 }
 .homePageIconTwitter {
-	background-image: url(../images/common/homePageIconTwitterBg-x2.png);
+	background-image: url(../images/common/homebotonCentro.png);
 	background-size: 24px 24px;
 }
 .homePageIconFacebook {
-	background-image: url(../images/common/homePageIconFacebookBg-x2.png);
+	background-image: url(../images/common/homeBotonChia.png);
 	background-size: 24px 24px;
 }
 .portfolioMenuWrapper li {
