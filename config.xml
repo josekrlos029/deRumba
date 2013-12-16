@@ -18,6 +18,7 @@ Descarga nuestra aplicacion y disfruta de la movida rumbera de tu ciudad.
 	</author>
 
 <preference name="phonegap-version" value="3.1.0" />
+<preference name="orientation" value="portrait" />
 	<gap:platforms>
 		<gap:platform name="android" minVersion="2.1" />
 		<gap:platform name="webos" />
@@ -32,7 +33,11 @@ Descarga nuestra aplicacion y disfruta de la movida rumbera de tu ciudad.
 	<icon src="icono.png" width="48" height="48" />
 	<icon src="icono.png" width="36" height="36" />
 
-    <gap:splash src="icono.png" />
+    <gap:splash src="splash/android/ldpi.9.png" gap:platform="android" gap:density="ldpi" />
+    <gap:splash src="splash/android/mdpi.9.png" gap:platform="android" gap:density="mdpi" />
+    <gap:splash src="splash/android/hdpi.9.png" gap:platform="android" gap:density="hdpi" />
+    <gap:splash src="splash/android/xhdpi.9.png" gap:platform="android" gap:density="xhdpi" />
+
 
 	<feature name="http://api.phonegap.com/1.0/geolocation"/>
 	<feature name="http://api.phonegap.com/1.0/network"/>
