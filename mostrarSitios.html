@@ -27,6 +27,8 @@
 <link href="css/skin.css" rel="stylesheet" type="text/css" media="all" />
 <link href="css/custom.css" rel="stylesheet" type="text/css" media="all" />
 <link href="css/deRumba.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/jquery.mobile.icons.min.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="css/jquery.mobile.structure-1.4.0.min.css" rel="stylesheet" type="text/css" media="screen"/>
 <!-- CSS files end -->
 
 <!-- JavaScript files start -->
@@ -35,8 +37,23 @@
 <script type="text/javascript" src="js/jquery.colorbox.min.js"></script>
 <script type="text/javascript" src="js/custom.js"></script>
 <script type="text/javascript" src="js/jquery.sticky.js"></script>
+<script type="text/javascript" src="js/jquery.mobile-1.4.0.min.js"></script>
 <script>
     $(window).ready(function(){
+        var $this = $( this ),
+                        theme = $this.jqmData( "theme" ) || $.mobile.loader.prototype.options.theme,
+                        msgText = $this.jqmData( "msgtext" ) || $.mobile.loader.prototype.options.text,
+                        textVisible = $this.jqmData( "textvisible" ) || $.mobile.loader.prototype.options.textVisible,
+                        textonly = !!$this.jqmData( "textonly" ),
+                        html = $this.jqmData( "html" ) || "";
+                    
+                    $.mobile.loading( "show", {
+                            text: msgText,
+                            textVisible: textVisible,
+                            theme: theme,
+                            textonly: textonly,
+                            html: html
+                    });
        var seccional = localStorage.getItem('seccional');
        var div = $("#carga");
         var url = "http://derumba.co/app20/administrador/mostrarSitiosPorSeccional/"+seccional;
@@ -51,6 +68,7 @@
                                     
                                     div.html(data);
 			            $(window).resize();
+                                    $.mobile.loading( "hide" );
 				    }
 		        });
                 

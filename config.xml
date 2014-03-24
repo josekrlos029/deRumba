@@ -25,19 +25,44 @@ Descarga nuestra aplicacion y disfruta de la movida rumbera de tu ciudad.
 		<gap:platform name="blackberry" project="widgets"/>
                 <gap:platform name="ios" />
 	</gap:platforms>
+        
+        <icon src="icons/ios/icon.png" gap:platform="ios" width="57" height="57" />
+        <icon src="icons/ios/icon-72.png" gap:platform="ios" width="72" height="72" />
+        <icon src="icons/ios/icon_at_2x.png" gap:platform="ios" width="114" height="114" />
 
-	<icon src="icono.png" gap:role="default" />
-	<icon src="icono.png" width="96" height="96" />
-	<icon src="icono.png" width="72" height="72" />
-	<icon src="icono.png" width="48" height="48" />
-	<icon src="icono.png" width="36" height="36" />
+        <!-- retina iPad support: PhoneGap 2.5.0+ only -->
+        <icon src="icons/ios/icon-72_at_2x.png" gap:platform="ios" width="144" height="144" />
+        
+	<icon src="icono.png" gap:platform="android" gap:role="default" />
+	<icon src="icono.png" gap:platform="android"  width="96" height="96" />
+	<icon src="icono.png" gap:platform="android" width="72" height="72" />
+	<icon src="icono.png" gap:platform="android" width="48" height="48" />
+	<icon src="icono.png" gap:platform="android" width="36" height="36" />
+        
+        <icon src="splash/ios/icon.png" gap:platform="ios" width="57" height="57" />
+        <icon src="splash/ios/icon-72.png" gap:platform="ios" width="72" height="72" />
+        <icon src="splash/ios/icon_at_2x.png" gap:platform="ios" width="114" height="114" />
 
+        <!-- retina iPad support: PhoneGap 2.5.0+ only -->
+        <icon src="splash/ios/icon-72_at_2x.png" gap:platform="ios" width="144" height="144" />
+        
+        
+        <!-- SPLASH -->
     <gap:splash src="splash/android/ldpi.9.png" gap:platform="android" gap:density="ldpi" />
     <gap:splash src="splash/android/mdpi.9.png" gap:platform="android" gap:density="mdpi" />
     <gap:splash src="splash/android/hdpi.9.png" gap:platform="android" gap:density="hdpi" />
     <gap:splash src="splash/android/xhdpi.9.png" gap:platform="android" gap:density="xhdpi" />
 
+    <gap:splash src="splash/ios/Default.png" gap:platform="ios" width="320" height="480" />
+    <gap:splash src="splash/ios/Default_at_2x.png" gap:platform="ios" width="640" height="960" />
+    <gap:splash src="splash/ios/Default_iphone5.png" gap:platform="ios" width="640" height="1136" />
+    <gap:splash src="splash/ios/Default-Landscape.png" gap:platform="ios" width="1024" height="748" />
+    <gap:splash src="splash/ios/Default-Portrait.png" gap:platform="ios" width="768" height="1004" />
 
+    <!-- retina iPad support: PhoneGap 2.5.0+ only -->
+    <gap:splash src="splash/ios/Default-Landscape_at_2x.png" gap:platform="ios" width="2048" height="1496" />
+    <gap:splash src="splash/ios/Default-Portrait_at_2x.png" gap:platform="ios" width="1536" height="2008" />
+    
 	<feature name="http://api.phonegap.com/1.0/geolocation"/>
 	<feature name="http://api.phonegap.com/1.0/network"/>
 
