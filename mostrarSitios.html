@@ -40,20 +40,7 @@
 <script type="text/javascript" src="js/jquery.mobile-1.4.0.min.js"></script>
 <script>
     $(window).ready(function(){
-        var $this = $( this ),
-                        theme = $this.jqmData( "theme" ) || $.mobile.loader.prototype.options.theme,
-                        msgText = $this.jqmData( "msgtext" ) || $.mobile.loader.prototype.options.text,
-                        textVisible = $this.jqmData( "textvisible" ) || $.mobile.loader.prototype.options.textVisible,
-                        textonly = !!$this.jqmData( "textonly" ),
-                        html = $this.jqmData( "html" ) || "";
-                    
-                    $.mobile.loading( "show", {
-                            text: msgText,
-                            textVisible: textVisible,
-                            theme: theme,
-                            textonly: textonly,
-                            html: html
-                    });
+        
        var seccional = localStorage.getItem('seccional');
        var div = $("#carga");
         var url = "http://derumba.co/app20/administrador/mostrarSitiosPorSeccional/"+seccional;
@@ -68,7 +55,7 @@
                                     
                                     div.html(data);
 			            $(window).resize();
-                                    $.mobile.loading( "hide" );
+                                    
 				    }
 		        });
                 
