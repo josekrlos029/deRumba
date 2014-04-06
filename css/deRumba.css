@@ -70,3 +70,11 @@ text-decoration: none;
 	font-size:12px;
 	font-family:Arial, Helvetica, sans-serif;
 }
+
+#footer{
+    height: 60px;
+    border-top: 5px rgb(0,255,0) solid;
+    background: black;
+    position: fixed;
+    width: 100%;
+}

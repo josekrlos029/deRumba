@@ -26,6 +26,7 @@
 <link href="css/hidpi.css" rel="stylesheet" type="text/css" media="screen" />
 <link href="css/skin.css" rel="stylesheet" type="text/css" media="all" />
 <link href="css/custom.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/deRumba.css" rel="stylesheet" type="text/css" media="all" />
 
 <!-- CSS files end -->
 <!-- JavaScript files start -->
@@ -40,12 +41,26 @@
     function onDeviceReady() {
        // navigator.splashscreen.show();
        // alert("Aqui vamos ");
+       
+       
     }
     function guardar(seccional){
         localStorage.setItem('seccional',seccional);
     }
     
+    $(window).ready(function(){resize(); });
     
+    $(window).resize(function(){resize();});
+    
+    $(window).scroll(function(){resize();});
+    
+    function resize(){
+        var height = $(window).height();
+        $("#footer").css("top",height - 60);
+        
+    }
+    
+        
 </script>
 <!-- JavaScript files end -->
 <style type="text/css">
@@ -86,18 +101,16 @@
     <!-- landing image starts --> 
     <a href="typography.html" class="landingImageWrapper"> <img src="images/content/logo-DeRumba.png" alt=""/> </a> 
     <!-- landing image ends -->
-    <div class="welcomeMessageWrapper">
-      <h3 class="welcomeTitle style4">BOGOTÁ!</h3>
+    <div style="margin-bottom: 10px;" class="welcomeMessageWrapper" >
+        <h4 class="welcomeTitle style4" style="color: rgb(0,255,0);">BOGOTÁ!</h4>
       <p class="welcomeMessage">¿Donde quieres rumbear hoy?</p>
     </div>
-    <div class="homePageIconsWrapper"> <a onclick="guardar('NORTE')" href="mostrarSitios.html" class="homePageIcon homePageIconAbout"></a> <a onclick="guardar('CENTRO')" href="mostrarSitios.html" class="homePageIcon homePageIconTwitter"></a> <a onclick="guardar('SUR')" href="mostrarSitios.html" class="homePageIcon homePageIconPortfolio"></a> <a onclick="guardar('ORIENTE')" href="mostrarSitios.html" class="homePageIcon homePageIconContact"></a> <a onclick="guardar('OCCIDENTE')" href="mostrarSitios.html" class="homePageIcon homePageIconDribbble"></a>  <a onclick="guardar('OTROS')" href="mostrarSitios.html" class="homePageIcon homePageIconFacebook"></a> </div>
+    <div style="border-top: 0.3px rgb(0,255,0) solid; padding-top: 20px; " class="homePageIconsWrapper"> <a onclick="guardar('NORTE')" href="mostrarSitios.html" class="homePageIcon homePageIconAbout"></a> <a onclick="guardar('CENTRO')" href="mostrarSitios.html" class="homePageIcon homePageIconTwitter"></a> <a onclick="guardar('SUR')" href="mostrarSitios.html" class="homePageIcon homePageIconPortfolio"></a> <a onclick="guardar('ORIENTE')" href="mostrarSitios.html" class="homePageIcon homePageIconContact"></a> <a onclick="guardar('OCCIDENTE')" href="mostrarSitios.html" class="homePageIcon homePageIconDribbble"></a>  <a onclick="guardar('OTROS')" href="mostrarSitios.html" class="homePageIcon homePageIconFacebook"></a> </div>
   </div>
   <!-- page wrapper ends --> 
   
   <!-- footer wrapper starts -->
-  
-  <div style="width: 100%"><div style="width: 75px; margin:0 auto;" align="center"><a style="float: left;" href="https://www.facebook.com/derumba.co"><img src="images/iconos/facebook-white.png" width="24" height="24" alt="face"></a><a style="float: left;" href="http://instagram.com/DeRumba_co"><img src="images/iconos/instagram-white.png" width="24" height="24" alt="instagram"></a><a style="float: left;" href="https://twitter.com/DeRumba_co"><img src="images/iconos/twitter-white.png" width="24" height="24" alt="twitter" ></a></div></div>
-  <div style="width: 100%"><div style="width: 200px; margin:0 auto;" align="center"> &copy; copyright <span class="style4">www.DeRumba.co</span></div></div>
+  <div id="footer">.</div>
   
   <!-- footer wrapper ends --> 
   

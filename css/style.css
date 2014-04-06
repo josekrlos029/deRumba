@@ -277,10 +277,10 @@ tr:hover > td {
 .welcomeMessage {
 	text-align: center;
 	color: #fff;
-	font-size: 18px;
+	font-size: 15px;
 	margin: 0px;
 	height: 24px;
-	line-height: 24px;
+	line-height: 20px;
 }
 .homePageIconsWrapper {
 	padding-bottom: 6px;
@@ -293,7 +293,7 @@ tr:hover > td {
 	border-radius: 50%;
 	height: 74px;
 	width: 74px;
-	border: 5px solid #ffffff;
+	border: 4px solid #ffffff;
 	/*background-color: #000000;*/
 	float: left;
 	margin-right: 15px;
