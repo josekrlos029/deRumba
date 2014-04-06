@@ -49,20 +49,7 @@
 <script type="text/javascript" src="js/jquery.sticky.js"></script>
 <script>
     $(window).ready(function(){
-        var $this = $( this ),
-                        theme = $this.jqmData( "theme" ) || $.mobile.loader.prototype.options.theme,
-                        msgText = $this.jqmData( "msgtext" ) || $.mobile.loader.prototype.options.text,
-                        textVisible = $this.jqmData( "textvisible" ) || $.mobile.loader.prototype.options.textVisible,
-                        textonly = !!$this.jqmData( "textonly" ),
-                        html = $this.jqmData( "html" ) || "";
-                    
-                    $.mobile.loading( "show", {
-                            text: msgText,
-                            textVisible: textVisible,
-                            theme: theme,
-                            textonly: textonly,
-                            html: html
-                    });
+        
        var sitio = localStorage.getItem('sitio');
        var div = $("#carga");
         var url = "http://app20.derumba.co/administrador/mostrarSitio/"+sitio;
