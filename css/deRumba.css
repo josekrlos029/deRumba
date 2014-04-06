@@ -78,3 +78,7 @@ text-decoration: none;
     position: fixed;
     width: 100%;
 }
+
+.tn td:hover{
+    background-color: transparent;
+}

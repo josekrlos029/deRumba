@@ -35,6 +35,19 @@
 <script type="text/javascript" src="js/jquery.colorbox.min.js"></script>
 <script type="text/javascript" src="js/custom.js"></script>
 <script src="js/phonegap.js"></script>
+<style>
+    a:hover{
+        background-color: transparent;
+    }
+    
+    a:checked{
+        background-color: transparent;
+    }
+    
+    a:link{
+        background-color: transparent;
+    }
+</style>
 <script>
     document.addEventListener("deviceready", onDeviceReady, false);
 
@@ -99,21 +112,24 @@
   <!-- page wrapper starts -->
   <div class="pageWrapper homePageWrapper"> 
     <!-- landing image starts --> 
-    <a href="typography.html" class="landingImageWrapper"> <img src="images/content/logo-DeRumba.png" alt=""/> </a> 
+    <a href="typography.html" class="landingImageWrapper"> <img src="images/content/logo-DeRumba.png" alt="De Rumba Donde Tu Quieras"/> </a> 
     <!-- landing image ends -->
     <div style="margin-bottom: 10px;" class="welcomeMessageWrapper" >
         <h4 class="welcomeTitle style4" style="color: rgb(0,255,0);">BOGOTÁ!</h4>
       <p class="welcomeMessage">¿Donde quieres rumbear hoy?</p>
     </div>
-    <div style="border-top: 0.3px rgb(0,255,0) solid; padding-top: 20px; " class="homePageIconsWrapper"> <a onclick="guardar('NORTE')" href="mostrarSitios.html" class="homePageIcon homePageIconAbout"></a> <a onclick="guardar('CENTRO')" href="mostrarSitios.html" class="homePageIcon homePageIconTwitter"></a> <a onclick="guardar('SUR')" href="mostrarSitios.html" class="homePageIcon homePageIconPortfolio"></a> <a onclick="guardar('ORIENTE')" href="mostrarSitios.html" class="homePageIcon homePageIconContact"></a> <a onclick="guardar('OCCIDENTE')" href="mostrarSitios.html" class="homePageIcon homePageIconDribbble"></a>  <a onclick="guardar('OTROS')" href="mostrarSitios.html" class="homePageIcon homePageIconFacebook"></a> </div>
+    <div style="border-top: 1px rgb(0,255,0) solid; padding-top: 20px; " class="homePageIconsWrapper"> <a onclick="guardar('NORTE')" href="mostrarSitios.html" class="homePageIcon homePageIconAbout"></a> <a onclick="guardar('CENTRO')" href="mostrarSitios.html" class="homePageIcon homePageIconTwitter"></a> <a onclick="guardar('SUR')" href="mostrarSitios.html" class="homePageIcon homePageIconPortfolio"></a> <a onclick="guardar('ORIENTE')" href="mostrarSitios.html" class="homePageIcon homePageIconContact"></a> <a onclick="guardar('OCCIDENTE')" href="mostrarSitios.html" class="homePageIcon homePageIconDribbble"></a>  <a onclick="guardar('OTROS')" href="mostrarSitios.html" class="homePageIcon homePageIconFacebook"></a> </div>
   </div>
   <!-- page wrapper ends --> 
   
   <!-- footer wrapper starts -->
   <div id="footer">
-      <div style="width: 282px; margin: 0 auto">
+      <div style="width: 350px; margin: 0 auto">
           
-          ...
+          <div style="float: left;margin-top: 5px; padding-left: 33px; padding-right: 50px;"><table class="tn" style="margin: 0; padding: 0; border: 0" border="0" ><tr style="margin: 0; padding: 0; border: 0"><td  align="center" style="margin: 0; padding: 0; border: 0"><img src="images/iconos/home.gif" alt="Inicio" width="30" height="30"/></td></tr><tr style="margin: 0; padding: 0;border: 0"><td style="margin: 0; padding: 0;border: 0" align="center"><p style="color: white; font-size: 8px;">Zonas</p></td></tr></table></div>
+          <div style="float: left;margin-top: 5px;padding-right: 50px; "><table class="tn" style="margin: 0; padding: 0; border: 0" border="0" ><tr style="margin: 0; padding: 0; border: 0"><td  align="center" style="margin: 0; padding: 0; border: 0"><img src="images/iconos/shape.gif" alt="Inicio" width="30" height="30" style="margin-left: 2px;"/></td></tr><tr style="margin: 0; padding: 0;border: 0"><td style="margin: 0; padding: 0;border: 0" align="center"><p style="color: white; font-size: 8px;">R.Cercana</p></td></tr></table></div>
+          <div style="float: left;margin-top: 5px;padding-right: 50px;"><table class="tn" style="margin: 0; padding: 0; border: 0" border="0" ><tr style="margin: 0; padding: 0; border: 0"><td  align="center" style="margin: 0; padding: 0; border: 0"><img src="images/iconos/calendar.gif" alt="Inicio" width="30" height="30"/></td></tr><tr style="margin: 0; padding: 0;border: 0"><td style="margin: 0; padding: 0;border: 0" align="center"><p style="color: white; font-size: 8px;">Eventos</p></td></tr></table></div>
+          <div style="float: left;margin-top: 5px;"><table class="tn" style="margin: 0; padding: 0; border: 0" border="0" ><tr style="margin: 0; padding: 0; border: 0"><td  align="center" style="margin: 0; padding: 0; border: 0"><img src="images/iconos/user.gif" alt="Inicio" width="30" height="30"/></td></tr><tr style="margin: 0; padding: 0;border: 0"><td style="margin: 0; padding: 0;border: 0" align="center"><p style="color: white; font-size: 8px;">Cuenta</p></td></tr></table></div>
           
       </div>
   </div>
