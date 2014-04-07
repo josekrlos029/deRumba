@@ -36,11 +36,37 @@
 <script type="text/javascript" src="js/jquery.colorbox.min.js"></script>
 <script type="text/javascript" src="js/custom.js"></script>
 <script type="text/javascript" src="js/jquery.sticky.js"></script>
+<script src="js/preloadjs.min.js"></script>
+<script src="js/createjs.min.js"></script>
 <script>
     $(window).ready(function(){
+        alert("preparado");
+        var seccional = localStorage.getItem('seccional');
+
+        preload();
         
-       var seccional = localStorage.getItem('seccional');
-       var div = $("#carga");
+        function preload(){
+            $.ajax({
+                url: "http://app20.derumba.co/administrador/mostrarSitiosPorSeccional/"+seccional,
+                type: "post",
+                data: "",
+                datatype: 'json',
+                success: function(data){
+                      alert("salio");
+                      alert(data.imagenes[0].src);
+                      var result = jQuery.parseJSON(data);
+                      alert(result.imagenes[0].src);
+                      alert("No pasó");
+                },
+                error:function(){
+                    alert("mission Failed :(");
+                }   
+            }); 
+        }
+               
+        function postload(){
+
+        var div = $("#carga");
         var url = "http://app20.derumba.co/administrador/mostrarSitiosPorSeccional/"+seccional;
                 var data="idPersona=1000697032";
                 $.ajax({
@@ -54,14 +80,13 @@
                                     div.html(data);
 			            $(window).resize();
                                     
-				    },
-                                    complete: function(){
-                                        
-                                    }
+				    }
 		        });
                 
             $("#cabecera").sticky({topSpacing:0});
         
+        }
+    
     });
     
     function mostrarSitio(idSitio){
@@ -86,8 +111,12 @@
     
     
     <!-- portfolio wrapper starts -->
-    <div id="carga">
+    <div id="carga" hidden>
       
+    </div>
+    
+    <div id="msj">
+        <p>hola</p>
     </div>
     <!-- portfolio wrapper ends --> 
     
