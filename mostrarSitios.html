@@ -43,7 +43,7 @@
     $(window).ready(function(){
         alert("preparado");
         var seccional = localStorage.getItem('seccional');
-
+        var cola;
         preload();
         
         function preload(){
@@ -54,23 +54,34 @@
                 datatype: 'json',
                 success: function(data){
                       
-                      alert(data);
-                      
-                      var json = eval("(" + data + ")");
-                      alert(json);
-                      alert(json[0].src);
-                      //var result = parseJSON(data);
-                      alert("pasó");
-                      //alert(imagenes[0].src);
-                      alert("No pasó");
-                      
+                    var json = eval("(" + data + ")");
+                    
+                    cola = new createjs.LoadQueue();
+                    alert("1");
+                    cola.loadFile({src:json, id:'imageList', type:createjs.LoadQueue.JSON});
+                    alert("2");
+                    cola.addEventListener("fileload", onDatosCargados);
+                    
+                    
+    
                 },
                 error:function(){
                     alert("mission Failed :(");
                 }   
             }); 
         }
-               
+        
+        function onDatosCargados(event)
+        {
+            alert("datos cargados");
+            cola.addEventListener("complete", onImagenesCompletadas);
+        }
+        
+        function onImagenesCompletadas(event)
+        {
+            alert("datos cargados");
+        }
+
         function postload(){
 
         var div = $("#carga");
