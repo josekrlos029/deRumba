@@ -53,8 +53,9 @@
                 datatype: 'json',
                 success: function(data){
                       alert("salio");
-                      alert(data.imagenes[0].src);
+                      
                       var result = jQuery.parseJSON(data);
+                      alert("pasó");
                       alert(result.imagenes[0].src);
                       alert("No pasó");
                 },
