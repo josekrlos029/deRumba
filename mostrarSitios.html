@@ -53,12 +53,12 @@
                 data: "",
                 datatype: 'json',
                 success: function(data){
-                      alert("salio");
-                      alert(data);
                       
-                      var result = parseJSON(data);
+                      alert(data);
+                      alert(data[0].src);
+                      //var result = parseJSON(data);
                       alert("pasó");
-                      alert(result.imagenes[0].src);
+                      //alert(imagenes[0].src);
                       alert("No pasó");
                       
                 },
