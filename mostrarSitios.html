@@ -48,13 +48,13 @@
         
         function preload(){
             $.ajax({
-                url: "http://app20.derumba.co/administrador/mostrarSitiosPorSeccional/"+seccional,
+                url: "http://app20.derumba.co/administrador/leerJson/"+seccional,
                 type: "post",
                 data: "",
                 datatype: 'json',
                 success: function(data){
                       alert("salio");
-                      alert(data)
+                      alert(data);
                       var result = parseJSON(data);
                       alert("pasó");
                       alert(result.imagenes[0].src);
