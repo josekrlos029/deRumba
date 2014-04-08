@@ -45,7 +45,7 @@
         var seccional = localStorage.getItem('seccional');
         var cola;
         preload();
-        
+        $("#msj").html("<p>Cargando...</p>");
         function preload(){
             var loader = new PxLoader(); 
             $.ajax({
@@ -66,7 +66,7 @@
                     }
                     alert("imagenes Cargadas 'segun'");
                     postload();
-                       
+                    $("#msj").html(""); 
                 },
                 error:function(){
                     alert("mission Failed :(");
@@ -75,17 +75,6 @@
             loader.start(); 
         }
         
-        function onDatosCargados(event)
-        {
-            alert("datos cargados");
-            cola.addEventListener("complete", onImagenesCompletadas);
-        }
-        
-        function onImagenesCompletadas(event)
-        {
-            alert("datos cargados");
-        }
-
         function postload(){
 
         var div = $("#carga");
@@ -133,7 +122,7 @@
     
     
     <!-- portfolio wrapper starts -->
-    <div id="carga" hidden>
+    <div id="carga">
       
     </div>
     
