@@ -41,13 +41,15 @@
 <script src="js/mootools-core-1.4.5.js"></script>
 <script>
     $(window).ready(function(){
-        
+        $("#cabecera").sticky({topSpacing:0});
         var seccional = localStorage.getItem('seccional');
         var cola;
         preload();
         $("#msj").html("<p>Cargando...</p>");
+        
         function preload(){
             var loader = new PxLoader(); 
+                                   
             $.ajax({
                 url: "http://app20.derumba.co/administrador/leerJson/"+seccional,
                 type: "post",
@@ -56,7 +58,7 @@
                 success: function(data){
                       
                     var json = eval("(" + data + ")");
-                    alert(json.lenght);
+                    cola = json;
                     for (var i =0 ; i<json.length; i++){
                         
                         var pxImage = new PxLoaderImage(json[i].src);
@@ -64,7 +66,7 @@
                         loader.add(pxImage);
                         
                     }
-                    alert("imagenes Cargadas 'segun'");
+                    
                     postload();
                     $("#msj").html(""); 
                 },
@@ -90,12 +92,19 @@
                                     
                                     div.html(data);
 			            $(window).resize();
-                                    
+                                    imagenes();
 				    }
 		        });
                 
-            $("#cabecera").sticky({topSpacing:0});
-        
+                       
+        }
+        function imagenes(){
+            alert("llegó");
+            for (var i =0 ; i<cola.length; i++){
+                        
+               $('#'+cola[i].id).attr("src", cola[i].src);         
+                        
+            }
         }
     
     });
