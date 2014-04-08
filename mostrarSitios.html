@@ -47,6 +47,7 @@
         preload();
         
         function preload(){
+            var loader = new PxLoader(); 
             $.ajax({
                 url: "http://app20.derumba.co/administrador/leerJson/"+seccional,
                 type: "post",
@@ -56,8 +57,6 @@
                       
                     var json = eval("(" + data + ")");
                     
-                    var loader = new PxLoader(); 
-                    alert("pasó");
                     for (var i =0 ; i<json.lenght; i++){
                         alert("p1");
                         var pxImage = new PxLoaderImage(json[i].src);
@@ -75,13 +74,14 @@
                     }); 
                     
                     
-                    loader.start(); 
+                    
     
                 },
                 error:function(){
                     alert("mission Failed :(");
                 }   
-            }); 
+            });
+            loader.start(); 
         }
         
         function onDatosCargados(event)
