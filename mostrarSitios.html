@@ -56,7 +56,7 @@
                 success: function(data){
                       
                     var json = eval("(" + data + ")");
-                    
+                    alert(json.lenght);
                     for (var i =0 ; i<json.lenght; i++){
                         alert("p1");
                         var pxImage = new PxLoaderImage(json[i].src);
