@@ -36,8 +36,8 @@
 <script type="text/javascript" src="js/jquery.colorbox.min.js"></script>
 <script type="text/javascript" src="js/custom.js"></script>
 <script type="text/javascript" src="js/jquery.sticky.js"></script>
-<script src="js/preloadjs.min.js"></script>
-<script src="js/createjs.min.js"></script>
+<script src="js/PxLoader.js"></script>
+<script src="js/PxLoaderImage.js"></script>
 <script src="js/mootools-core-1.4.5.js"></script>
 <script>
     $(window).ready(function(){
@@ -55,14 +55,21 @@
                 success: function(data){
                       
                     var json = eval("(" + data + ")");
+                    var loader = new PxLoader(); 
+                    for (var i =0 ; i<json.lenght; i++){
+                        var pxImage = new PxLoaderImage(json[i].src);
+                        pxImage.imageNumber=i;
+                        loader.add(pxImage);
+                    }
                     
-                    cola = new createjs.LoadQueue();
-                    alert("1");
-                    cola.loadFile({src:json, id:'imageList', type:createjs.LoadQueue.JSON});
-                    alert("2");
-                    cola.addEventListener("fileload", onDatosCargados);
+                    loader.addProgressListener(function(e) { 
+ 
+                        // log which image completed 
+                        alert($log.val() + 'Image ' + e.resource.imageNumber + ' Loaded\r');
+                    }); 
                     
                     
+                    loader.start(); 
     
                 },
                 error:function(){
