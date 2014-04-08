@@ -57,9 +57,13 @@
                     var json = eval("(" + data + ")");
                     var loader = new PxLoader(); 
                     for (var i =0 ; i<json.lenght; i++){
+                        alert("p1");
                         var pxImage = new PxLoaderImage(json[i].src);
+                        alert("p2");
                         pxImage.imageNumber=i;
+                        alert("p3");
                         loader.add(pxImage);
+                        alert("p4");
                     }
                     
                     loader.addProgressListener(function(e) { 
